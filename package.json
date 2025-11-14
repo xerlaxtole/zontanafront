@@ -1,0 +1,33 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js",
+    "install:frontend": "cross-env-shell \"cd frontend && npm install\"",
+    "dev": "concurrently -n FE,BE -c blue,green \"npm run frontend\" \"npm start\"",
+    "dev:no-open": "BROWSER=none concurrently -n FE,BE -c blue,green \"npm run frontend\" \"npm start\"",
+    "frontend": "cross-env-shell \"cd frontend && npm start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.5.3",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.10",
+    "npm-run-all": "^4.1.5"
+  }
+}
