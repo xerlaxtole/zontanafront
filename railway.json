@@ -6,7 +6,6 @@
   },
   "deploy": {
     "startCommand": "cd frontend && npx serve -s build -l $PORT",
-    "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 10
+    "restartPolicyType": "NEVER"
   }
 }
